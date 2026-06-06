@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+  --sage: #7c9a82;
+  --sage-dark: #5f7d65;
+  --sand: #f5f0e8;
+  --sand-dark: #e8dfd2;
+  --terracotta: #c4846c;
+  --plum: #3d2c4e;
+  --gold: #d4a853;
+  --cream: #faf8f4;
+  --text: #2c2a28;
+  --text-muted: #6b6560;
+  --white: #ffffff;
+  --radius: 16px;
+  --shadow: 0 8px 32px rgba(61, 44, 78, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, .brand-link, .hero-title, .section-header h2, .class-title {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Navbar */
+.site-navbar {
+  background: var(--plum);
+  border-bottom: 3px solid var(--gold);
+}
+
+.brand-link {
+  color: var(--sand) !important;
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.brand-icon {
+  color: var(--gold);
+  margin-right: 0.35rem;
+}
+
+.nav-pill {
+  color: var(--sand) !important;
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 0.4rem 1rem !important;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-pill.active,
+.nav-pill:hover {
+  background: rgba(212, 168, 83, 0.2) !important;
+  color: var(--gold) !important;
+}
+
+/* Hero */
+.hero-section {
+  background: linear-gradient(135deg, var(--plum) 0%, var(--sage-dark) 100%);
+  color: var(--sand);
+  padding: 5rem 0;
+}
+
+.hero-eyebrow,
+.section-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.hero-desc {
+  max-width: 540px;
+  line-height: 1.7;
+  margin: 1.5rem 0 2rem;
+  opacity: 0.85;
+}
+
+.cta-btn {
+  background: var(--terracotta) !important;
+  border-color: var(--terracotta) !important;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.65rem 1.75rem;
+}
+
+.cta-btn:hover {
+  background: #b06f58 !important;
+  border-color: #b06f58 !important;
+}
+
+.cta-btn-outline {
+  border-radius: 999px;
+  border-color: var(--sand) !important;
+  color: var(--sand) !important;
+  font-weight: 600;
+}
+
+.cta-btn-outline:hover {
+  background: rgba(245, 240, 232, 0.15) !important;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(212, 168, 83, 0.35);
+  border-radius: var(--radius);
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+}
+
+.hero-card h3 {
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.hero-stat {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.stat-num {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Sections */
+.section-pad {
+  padding: 4rem 0;
+}
+
+.section-header h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--plum);
+}
+
+/* Cards */
+.class-card {
+  border: 2px solid var(--sand-dark);
+  border-radius: var(--radius);
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  background: var(--white);
+}
+
+.class-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.class-card--selected {
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 3px rgba(196, 132, 108, 0.25);
+}
+
+.class-title {
+  font-size: 1.35rem;
+  color: var(--plum);
+}
+
+.class-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.class-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.class-price {
+  font-weight: 700;
+  color: var(--sage-dark);
+}
+
+.difficulty-badge {
+  background: var(--sage) !important;
+}
+
+.select-btn {
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Panels */
+.panel-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--sand-dark);
+}
+
+/* Schedule */
+.day-tab {
+  border: 2px solid var(--sand-dark);
+  background: var(--white);
+  border-radius: 999px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.day-tab.active {
+  background: var(--plum);
+  border-color: var(--plum);
+  color: var(--sand);
+}
+
+.schedule-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--sand-dark);
+}
+
+.schedule-time {
+  font-weight: 700;
+  color: var(--terracotta);
+  min-width: 80px;
+}
+
+.dropin-accordion .accordion-button:not(.collapsed) {
+  background: var(--sand);
+  color: var(--plum);
+}
+
+/* Reserve */
+.reserve-panel {
+  max-width: 900px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--sand-dark);
+}
+
+.step-indicator {
+  flex-wrap: wrap;
+}
+
+.step-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--sand);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.step-pill.active {
+  background: var(--plum);
+  color: var(--sand);
+}
+
+.step-pill.done {
+  background: var(--sage);
+  color: var(--white);
+}
+
+.step-num {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.date-grid,
+.time-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.date-slot,
+.time-slot {
+  border: 2px solid var(--sand-dark);
+  background: var(--white);
+  border-radius: 12px;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.date-slot.active,
+.time-slot.active {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  color: var(--white);
+}
+
+.confirm-card {
+  padding: 2rem;
+}
+
+.confirm-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--sage);
+  color: var(--white);
+  font-size: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.confirm-detail {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 1.5rem 0 2rem;
+}
+
+/* Filters */
+.filter-btn {
+  border-radius: 999px !important;
+  margin: 0.25rem;
+}
+
+.selection-banner {
+  background: var(--sand);
+  border-left: 4px solid var(--terracotta);
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Contact */
+.contact-block {
+  margin-bottom: 1.5rem;
+}
+
+.contact-block h5 {
+  color: var(--plum);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--plum);
+  color: var(--sand);
+}
+
+.footer-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--gold);
+}
+
+.footer-heading {
+  color: var(--gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+}
+
+.footer-text {
+  color: rgba(245, 240, 232, 0.85);
+  font-size: 0.9rem;
+}
+
+.footer-divider {
+  border-color: rgba(212, 168, 83, 0.3);
+}
+
+.footer-credit {
+  color: rgba(245, 240, 232, 0.6);
+  font-size: 0.85rem;
+}
+
+/* Bootstrap overrides */
+.btn-primary {
+  background: var(--terracotta) !important;
+  border-color: var(--terracotta) !important;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #b06f58 !important;
+  border-color: #b06f58 !important;
+}
+
+.btn-outline-primary {
+  color: var(--terracotta) !important;
+  border-color: var(--terracotta) !important;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+  background: var(--terracotta) !important;
+  color: var(--white) !important;
+}
